@@ -8,8 +8,8 @@
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="https://via.placeholder.com/150x150" width="191" height="39" alt="Кэт энерджи">
+    <a class="page-header__logo logo" href="index.html">
+      <img class="logo__img" src="https://via.placeholder.com/150x150" width="191" height="39" alt="Кэт энерджи">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button" name="button">Открыть меню</button>
@@ -23,11 +23,113 @@
     </nav>
   </header>
   <main class="page-main">
-
+    <h2 class="page-main__title">Подбор программы</h2>
+    <form class="data-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="cat-info">
+        <p>Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <p class="cat-info__name">
+          <label for="name">Имя:<sup>*</sup></label>
+          <input id="name" type="text" placeholder="Барсик">
+        </p>
+        <p class="cat-info__weight">
+          <label for="weight">Вес (кг):<sup>*</sup></label>
+          <input id="weight" type="number" placeholder="7">
+        </p>
+        <p class="cat-info__age">
+          <label for="age">Возраст (лет):</label>
+          <input id="age" type="number" placeholder="7">
+        </p>
+      </div>
+      <div class="cat-needs">
+        <ul class="cat-needs__list">
+          <li class="needs cat-needs__item">
+            <label class="needs__item">
+              <input class="needs__input visually-hidden" type="radio" name="grid" value="losing weight" checked>
+              <span class="needs__radio__btn"></span>
+              Похудение
+            </label>
+          </li>
+          <li class="needs cat-needs__item">
+            <label class="needs__item">
+              <input class="needs__input visually-hidden" type="radio" name="grid" value="Mass gain">
+              <span class="needs__radio__btn"></span>
+              Набор массы
+            </label>
+          </li>
+          <li class="needs cat-needs__item">
+            <label class="needs__item">
+              <input class="needs__input visually-hidden" type="radio" name="grid" value="I don’t know (I need your advice)">
+              <span class="needs__radio__btn"></span>
+              Не знаю (Нужен ваш совет)
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="contacts">
+        <h2 class="contacts__title">Контактные данные (владельца кота)</h2>
+        <p class="contacts__email">
+          <label for="email">E-mail:<sup>*</sup></label>
+          <input id="email" type="email" placeholder="kuklachev@gmail.com">
+        </p>
+        <p class="contacts__number">
+          <label for="number">Телефон:<sup>*</sup></label>
+          <input id="number" type="text" placeholder="8 (960) 900-60-90">
+        </p>
+      </div>
+      <div class="comment">
+        <h2 class="comment__title">Комментарий</h2>
+        <textarea name="comment" rows="8" cols="40" placeholder="Расскажите обо всех повадках кота"></textarea>
+      </div>
+      <div class="extra-products">
+        <h2 class="extra-products__title">Дополнительно</h2>
+        <ul class="extra-products__list">
+          <li class="extra-product extra-products__item">
+            <label class="extra-product__label">
+              <input class="extra-product__input visually-hidden" type="checkbox" name="slider" checked>
+              <span class="extra-product__checkbox__btn"></span>
+              Сахарозаменитель
+            </label>
+          </li>
+          <li class="extra-product extra-products__item">
+            <label class="extra-product__label">
+              <input class="extra-product__input visually-hidden" type="checkbox" name="slider">
+              <span class="extra-product__checkbox__btn"></span>
+              Питьевая вода
+            </label>
+          </li>
+          <li class="extra-product extra-products__item">
+            <label class="extra-product__label">
+              <input class="extra-product__input visually-hidden" type="checkbox" name="slider">
+              <span class="extra-product__checkbox__btn"></span>
+              Молоко
+            </label>
+          </li>
+          <li class="extra-product extra-products__item">
+            <label class="extra-product__label">
+              <input class="extra-product__input visually-hidden" type="checkbox" name="slider">
+              <span class="extra-product__checkbox__btn"></span>
+              Витамины
+            </label>
+          </li>
+        </ul>
+      </div>
+      <button class="form__button" type="submit" name="button">Отправить заявку</button>
+      <p class="page-main__important"><sup>*</sup> — Обязательные поля</p>
+    </form>
   </main>
   <footer class="page-footer">
-    <a class="page-footer__logo" href="index.html">
-      <img class="page-footer__logo-image" src="https://via.placeholder.com/150x150" width="128" height="24" alt="">
+    <section class="map">
+      <div class="map__contacts">
+        <p class="map__contacts__title">приглашаем к сотрудничеству дилеров!</p>
+        <p class="map__contacts__address" ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.581938678386!2d30.321538000000004!3d59.939079!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sus!4v1583421674796!5m2!1sru!2sus"
+        allowfullscreen="">
+      </iframe>
+    </section>
+    <a class="page-footer__logo logo" href="index.html">
+      <img class="logo__img" src="https://via.placeholder.com/150x150" width="128" height="24" alt="">
     </a>
     <div class="page-footer__social social">
       <ul class="social__list">
